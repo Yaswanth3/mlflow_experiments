@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/yaswa/Documents/GenAI_Practice/KrishNaik_NLP_Course/mlflow/mlruns/0/eba675dbf9514ac890968b31ff7b97c5/artifacts
+end_time: 1740258655498
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: eba675dbf9514ac890968b31ff7b97c5
+run_name: burly-shark-519
+run_uuid: eba675dbf9514ac890968b31ff7b97c5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740258652751
+status: 3
+tags: []
+user_id: yaswa
