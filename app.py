@@ -13,6 +13,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import ElasticNet
 from urllib.parse import urlparse
 import mlflow
+import dagshub
 from mlflow.models import infer_signature
 import mlflow.sklearn
 
@@ -21,6 +22,7 @@ import logging
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
 
+dagshub.init(repo_owner='Yaswanth3', repo_name='mlflow_experiments', mlflow=True)
 
 def eval_metrics(actual, pred):
     rmse = np.sqrt(mean_squared_error(actual, pred))
@@ -80,8 +82,8 @@ if __name__ == "__main__":
 
         ## For Remote server only(DAGShub)
 
-        #remote_server_uri="https://dagshub.com/krishnaik06/mlflowexperiments.mlflow"
-        #mlflow.set_tracking_uri(remote_server_uri)
+        remote_server_uri="https://dagshub.com/Yaswanth3/mlflow_experiments.mlflow"
+        mlflow.set_tracking_uri(remote_server_uri)
 
         tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
